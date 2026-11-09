@@ -18,6 +18,7 @@ create table produits (
     prix_ht decimal (8,2) not null,
     stock int unsigned not null default 0,
     id_categorie int  not null,
+    -- cle etrangere(dependance)
     foreign key (id_categorie) references categories(id)
     
 );
