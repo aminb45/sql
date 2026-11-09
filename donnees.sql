@@ -1,3 +1,4 @@
+ -- connect to the boutique database
 use boutique;
 -- insertion de lignes dans la table categories
 insert into categories (libelle) values ('Informatique');
