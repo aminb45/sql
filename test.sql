@@ -8,8 +8,7 @@ use boutique;
 -- créer la table categories avec les colonnes id et libelle
 create table categories (
     id int primary key auto_increment,
-    libelle varchar(70) not null unique
-);
+    libelle varchar(70) not null unique);
 -- creation de table des produits
 create table produits (
     id int primary key auto_increment,
@@ -22,3 +21,16 @@ create table produits (
     foreign key (id_categorie) references categories(id)
     
 );
+-- creation  de latable clients
+create table clients (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nom VARCHAR(70) NOT NULL,
+    prenom VARCHAR(70) NOT NULL,
+    adresse TEXT NOT NULL,
+    code_postal VARCHAR(5) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    mot_de_passe VARCHAR(100),
+    ville VARCHAR(100) NOT NULL,
+    date_inscription DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+    
