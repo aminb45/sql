@@ -1,2 +1,1 @@
-learing SQL
- 
+learing SQL with an exercice where we did create a fake company database
