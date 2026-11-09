@@ -40,3 +40,13 @@ create table commandes (
     id_client int not null,
     foreign key (id_client) references clients(id)
 );
+create table lignes_commandes (
+    id int primary key auto_increment,
+    id_commande int not null,
+    id_produit int not null,
+    quantite int not null,
+    montant decimal (8,2) not null,
+    foreign key (id_commande) references commandes(id),
+    foreign key (id_produit) references produits (id)
+
+);
