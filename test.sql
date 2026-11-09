@@ -33,4 +33,10 @@ create table clients (
     ville VARCHAR(100) NOT NULL,
     date_inscription DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-    
+-- creation de la table commandes
+create table commandes (
+    id int primary key auto_increment,
+    date_commande date not null,
+    id_client int not null,
+    foreign key (id_client) references clients(id)
+);
